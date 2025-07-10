@@ -15,7 +15,7 @@ const Home = () => {
     } , [])
     const cards = data.map((data_item, index) => {
         return(
-            <Card keyid={index} title={data_item.title} price={data_item.price} description={data_item.description} image={data_item.image} bn={button_name[index] } />
+            <Card keyid={index} title={data_item.title} price={data_item.price} description={data_item.description} image={data_item.image} />
         )
     })
     return (

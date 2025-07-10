@@ -16,7 +16,7 @@ export const cartSlice = createSlice({
           image: action.payload.image,
           price: action.payload.price,
         };
-        state.cart_list = state.cart_list.filter((citem) => {citem != item})
+        state.cart_list = state.cart_list.filter((citem) => {return(citem.name != item.name && citem.image != item.image && citem.price != item.price && citem.description != item.description)})
     },
 
     add_item_cart: (state, action) => {
