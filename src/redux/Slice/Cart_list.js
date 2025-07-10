@@ -15,16 +15,18 @@ export const cartSlice = createSlice({
           description: action.payload.description,
           image: action.payload.image,
           price: action.payload.price,
+          id: action.payload.id
         };
         state.cart_list = state.cart_list.filter((citem) => {return(citem.name != item.name && citem.image != item.image && citem.price != item.price && citem.description != item.description)})
-    },
-
-    add_item_cart: (state, action) => {
+      },
+      
+      add_item_cart: (state, action) => {
         let item = {
-            name: action.payload.name,
-            description: action.payload.description,
-            image: action.payload.image,
-            price: action.payload.price
+          name: action.payload.name,
+          description: action.payload.description,
+          image: action.payload.image,
+          price: action.payload.price,
+          id: action.payload.id
         }
         state.cart_list.push(item)
         console.log("Data has been added to cart list successfully")

@@ -18,7 +18,7 @@ const Home_card = (props) => {
             dispatch(remove_item(id))
             dispatch(increment_p(props.price))
             dispatch(increment())
-            dispatch(add_item_cart({name: props.title , description: props.description , image:props.image , price: props.price}))
+            dispatch(add_item_cart({name: props.title , description: props.description , image:props.image , price: props.price , id:id}))
             toast.success('Item added', {
                 position: "top-center",
                 autoClose: 1000,

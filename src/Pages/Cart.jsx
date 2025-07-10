@@ -7,10 +7,10 @@ const Cart = () => {
   const count = useSelector((state) => state.count.value)
   const price = useSelector((state) => state.price.pricer)
   const navigate = useNavigate()
-  const card_list = cart_list.map((data_item, index) => {
+  const card_list = cart_list.map((data_item) => {
     console.log(data_item)
     return (
-      <Card keyid={index} title={data_item.name} price={data_item.price} description={data_item.description} image={data_item.image} />
+      <Card keyid={data_item.id} title={data_item.name} price={data_item.price} description={data_item.description} image={data_item.image} />
     )
   })
   return (
